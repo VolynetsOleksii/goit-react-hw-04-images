@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Searchbar from './Searchbar/Searchbar';
+import {Searchbar} from './Searchbar/Searchbar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ImageGallery } from './ImageGallery/ImageGallery';

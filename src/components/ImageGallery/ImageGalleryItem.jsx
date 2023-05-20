@@ -7,16 +7,12 @@ import { ModalImage } from 'components/Modal/Modal.styled';
 export const ImageGalleryItem = ({ webformatURL, largeImageURL, tags }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
-
   return (
     <>
-      <ImageItem onClick={() => toggleModal(largeImageURL)}>
+      <ImageItem onClick={() => setShowModal(true)}>
         <Image src={webformatURL} alt={tags} />
         {showModal && (
-          <Modal onClose={toggleModal}>
+          <Modal onClose={() => setShowModal(false)}>
             <ModalImage src={largeImageURL} alt={tags} />
           </Modal>
         )}
