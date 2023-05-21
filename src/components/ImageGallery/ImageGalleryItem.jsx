@@ -11,12 +11,12 @@ export const ImageGalleryItem = ({ webformatURL, largeImageURL, tags }) => {
     <>
       <ImageItem onClick={() => setShowModal(true)}>
         <Image src={webformatURL} alt={tags} />
-        {showModal && (
-          <Modal onClose={() => setShowModal(false)}>
-            <ModalImage src={largeImageURL} alt={tags} />
-          </Modal>
-        )}
       </ImageItem>
+      {showModal && (
+        <Modal onClose={() => setShowModal(false)}>
+          <ModalImage src={largeImageURL} alt={tags} />
+        </Modal>
+      )}
     </>
   );
 };
