@@ -52,6 +52,7 @@ export const App = () => {
       .catch(isError => {
         toast.error('Oops, something went wrong, please try again');
         setIsError(isError.message);
+        setIsLoading(false);
       });
   }, [searchItem, page]);
 
